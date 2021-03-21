@@ -49,7 +49,7 @@ Write a function named `greeting` that takes in a single string and returns the 
 
 Then, write a function named `speaker` that takes in an array of strings and a callback function. 
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
+Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
@@ -81,11 +81,15 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  
+  arr.push(value);
+
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,7 +111,16 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  //new array
+  const newArray = [];
+  //for each to loop on each avaiable item using availability
+  availableItems.forEach(item => {
+    //if statement to check items are availe if this is true let push in new array
+    if (item.available) {
+      newArray.push(item.name);
+    }
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,7 +138,23 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const outputNum = [];
+  arr.forEach(num => {
+    if (num % 3 === 0 && num % 5 === 0) {
+      outputNum.push("Fizz Buzz");
+    } else if (num % 3 === 0) {
+      outputNum.push("Fizz");
+    } else if (num % 5 === 0) {
+      outputNum.push("Buzz");
+    } else {
+      outputNum.push(num);
+    }
+
+  });
+  return outputNum;
+
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -179,7 +208,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
