@@ -9,11 +9,9 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  const answer = [];
-  arr.forEach(value => {
-    answer.push(value + 1);
-  });
-  return answer;
+  const answerAddOne = [];
+  arr.forEach(value => answerAddOne.push(value + 1));
+  return answerAddOne;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +23,9 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+  const string = [];
+  arr.forEach(addString => string.push(addString + '!'));
+  return string;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +37,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const newArray = [];
+  arr.forEach(allCap => newArray.push(allCap.toUpperCase()));
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,11 +53,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  return word.toUpperCase() + '!';
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  const strings = [];
+  words.forEach(value => {
+    strings.push(callback(value));
+  });
+  return strings;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +81,7 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  
 };
 
 const addNumbers = (num, arr, times, callback) => {
