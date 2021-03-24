@@ -44,8 +44,8 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   const newArray = [];
-  for (let i in arr){
-    newArray.push(Math.pow(2,arr[i]));
+  for (let i in arr) {
+    newArray.push(Math.pow(2, arr[i]));
   }
   return newArray;
 };
@@ -58,7 +58,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   const eachArray = [];
-  arr.forEach(output => eachArray.push(Math.pow(2,output)));
+  arr.forEach(output => eachArray.push(Math.pow(2, output)));
   return eachArray;
 };
 
@@ -69,7 +69,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let outValue = arr.map(value=>(Math.pow(2,value)));
+  let outValue = arr.map(value => (Math.pow(2, value)));
   return outValue;
 };
 
@@ -84,7 +84,7 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  // Solution code here...
+  return arr.map(num => num.charCodeAt());
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -256,7 +256,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array containing the character code for each letter', () => {
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1'])).toStrictEqual([67, 111, 100, 101, 51, 48, 49]);
     expect(charCode(['C', 'o', 'd', 'e', '3', '0', '1']).length).toStrictEqual(7);
