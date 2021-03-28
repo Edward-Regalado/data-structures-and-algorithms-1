@@ -6,9 +6,9 @@ CHALLENGE 1 - Review
 Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'. 
 ------------------------------------------------------------------------------------------------ */
 
-const replaceZeros = (string) => {
-  // Solution code here...
-}
+// const replaceZeros = (string) =>
+//   // Solution code here...
+//
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
