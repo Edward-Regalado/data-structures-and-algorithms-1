@@ -19,11 +19,11 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj) {
-  const keypears = [];
+  const keyPeers = [];
   for (let [key, value] of Object.entries(obj)) {
-    keypears.push(`<li>${key}: ${value}</li>`);
+    keyPeers.push(`<li>${key}: ${value}</li>`);
   }
-  return keypears;
+  return keyPeers;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +59,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let sum = 0;
+  input.map((i) => {
+    i.map((j) => {
+      sum = j + sum;
+    });
+  });
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,9 +84,10 @@ const divisibleByFiveTwoToThePower = (input) => {
   let arr = [];
   for (let i = 0; i < input.length; i++) {
     let inArr = input[i];
-    arr.push(inArr.filter(num => ((num % 5 === 0) && typeof (num) === 'number')).map(num => Math.pow(2, num)));  //math.pow2
+    arr.push(inArr.filter(num => ((num % 5 === 0) && typeof (num) === 'number')).map(num => Math.pow(2, num)));
 
-  };
+  }
+  return arr;
 };
 
 
@@ -151,15 +158,16 @@ let findMaleAndFemale = (data) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
  
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let result = data.filter( character => character.height).reduce((a, b) => (b.height > a.height ? b : a));
+  console.log(result);
+  return result.name;
 };
-
 /* ------------------------------------------------------------------------------------------------
 TESTS
  
