@@ -1,4 +1,8 @@
-# Data Structures and Algorithms
+# Table of Contents
+
+1. [Code Challenge #1 Reverse Array](code_challenges/array_reverse/README.md)
+
+## Data Structures and Algorithms
 
 ## Language: `Python`
 
