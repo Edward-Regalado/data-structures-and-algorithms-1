@@ -4,6 +4,8 @@
 
 2. [Code Challenge #2 Array Shift](code_challenges/array_shift/README.md)
 
+3. [Code Challenge #3 Array BinarySearch](code_challenges/binary_array_search/README.md)
+
 *************************************************************
 
 ## Data Structures and Algorithms
